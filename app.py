@@ -94,16 +94,16 @@ if st.button('Submit'):
 	csv_file = pd.read_csv(file)
 	select_cols = st.multiselect('Select columns',list(csv_file.columns))
 
-opt = st.radio('Select option',('Draw for 2 sets', 'Draw for 3 sets', 'Draw for 4 sets', 'Draw for 5 sets'))
+	opt = st.radio('Select option',('Draw for 2 sets', 'Draw for 3 sets', 'Draw for 4 sets', 'Draw for 5 sets'))
 
-if opt == 'Draw for 2 sets':
-	draw_for_two(csv_file,select_cols)
+	if opt == 'Draw for 2 sets':
+		draw_for_two(csv_file,select_cols)
 
-if opt == 'Draw for 3 sets':
-	draw_for_three(csv_file, select_cols)
+	if opt == 'Draw for 3 sets':
+		draw_for_three(csv_file, select_cols)
 
-if opt == 'Draw for 4 sets':
-	draw_for_four(csv_file, select_cols)
+	if opt == 'Draw for 4 sets':
+		draw_for_four(csv_file, select_cols)
 
-if opt == 'Draw for 5 sets':
-	draw_for_five(csv_file, select_cols)
+	if opt == 'Draw for 5 sets':
+		draw_for_five(csv_file, select_cols)

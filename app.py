@@ -90,8 +90,9 @@ show_file = st.empty()
 if not file:
     show_file.info('Please upload a file of type: '+','.join(FILE_TYPES))
 
-csv_file = pd.read_csv(file)
-select_cols = st.multiselect('Select columns',list(csv_file.columns))
+if st.button('Submit'):
+	csv_file = pd.read_csv(file)
+	select_cols = st.multiselect('Select columns',list(csv_file.columns))
 
 opt = st.radio('Select option',('Draw for 2 sets', 'Draw for 3 sets', 'Draw for 4 sets', 'Draw for 5 sets'))
 
